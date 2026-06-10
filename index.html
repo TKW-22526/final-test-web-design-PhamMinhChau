@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Web Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Top Menu Bar -->
+        <div class="menubar">
+            <div class="menubar-logo">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="menubar-items">
+                <div class="menu-item" id="menu-file">File
+                    <div class="dropdown">
+                        <div class="dropdown-item" id="export-file-btn">Export File (Save As...)</div>
+                        <div class="dropdown-item" id="export-zip-btn">Export Project (.zip)</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Body -->
+        <div class="main-body">
+            <!-- Activity Bar -->
+            <div class="activity-bar">
+                <div class="activity-icon active" title="Explorer"><i class="fa-regular fa-file-code"></i></div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-title">EXPLORER</div>
+                <div class="sidebar-section">
+                    <div class="section-header">
+                        <div class="section-header-title"><i class="fa-solid fa-chevron-down"></i> MY PROJECT</div>
+                        <div class="section-actions">
+                            <i class="fa-solid fa-file-circle-plus" id="new-file-btn" title="New File"></i>
+                            <i class="fa-solid fa-folder-plus" id="new-folder-btn" title="New Folder"></i>
+                        </div>
+                    </div>
+                    <div class="file-tree">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor Area -->
+            <div class="editor-area">
+                <!-- Editor Tabs -->
+                <div class="editor-tabs">
+
+                </div>
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <span>MY PROJECT</span> <i class="fa-solid fa-chevron-right"></i> <span
+                        id="breadcrumb-filename"></span>
+                </div>
+                <!-- Monaco Editor Container -->
+                <div id="monaco-container"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- JSZip for Exporting ZIP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- RequireJS & Monaco Editor CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
